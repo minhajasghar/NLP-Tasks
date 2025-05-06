@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcasm Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-weight: 600;
+            color: #5f6368;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+            resize: none;
+            height: 150px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .sarcastic {
+            color: #ff6347;
+            font-weight: 600;
+        }
+
+        .not-sarcastic {
+            color: #4CAF50;
+            font-weight: 600;
+        }
+
+        .error {
+            color: #d9534f;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sarcasm Detection</h1>
+        <form method="POST">
+            <textarea name="headline" placeholder="Enter a headline here..." required></textarea><br>
+            <button type="submit" class="btn">Check Sarcasm</button>
+        </form>
+        {% if result %}
+            <div class="result">
+                <p class="{{ 'sarcastic' if result == 'Sarcastic' else 'not-sarcastic' }}">
+                    {{ result }}
+                </p>
+            </div>
+        {% endif %}
+        {% if result == "Please enter a valid headline." %}
+            <div class="error">
+                <p>{{ result }}</p>
+            </div>
+        {% endif %}
+        <footer>
+            <p>Smart. Simple. Sarcasm Detector. 🤖</p>
+        </footer>
+    </div>
+</body>
+</html>
