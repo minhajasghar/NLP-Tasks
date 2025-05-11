@@ -18,7 +18,8 @@ A simple and lightweight web app built with Flask that detects sarcasm in text u
 
 - Python  
 - Flask  
-- Scikit-learn  
+- Scikit-learn
+- NLTK
 - HTML & CSS  
 - Jupyter Notebook (for model training)
 
