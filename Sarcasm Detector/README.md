@@ -1,4 +1,4 @@
-# 😏 Sarcasm Detector
+# Sarcasm Detector
 
 A simple and lightweight web app built with Flask that detects sarcasm in text using a machine learning model.
 
@@ -6,7 +6,7 @@ A simple and lightweight web app built with Flask that detects sarcasm in text u
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Real-time sarcasm prediction
 - Clean and user-friendly interface
@@ -14,7 +14,7 @@ A simple and lightweight web app built with Flask that detects sarcasm in text u
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - Python  
 - Flask  
